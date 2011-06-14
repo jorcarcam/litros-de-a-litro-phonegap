@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'litrosdealitro_phonegap' target in the 'litrosdealitro_phonegap' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
