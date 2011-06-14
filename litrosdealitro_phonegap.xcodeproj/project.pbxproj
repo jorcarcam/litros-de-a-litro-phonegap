@@ -33,6 +33,7 @@
 		A76CCF4313A7F93A00951A82 /* AppDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = A76CCF4213A7F93A00951A82 /* AppDelegate.h */; };
 		A76CCF4513A7F93A00951A82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76CCF4413A7F93A00951A82 /* AppDelegate.m */; };
 		A76CCF4813A7F93A00951A82 /* README in Resources */ = {isa = PBXBuildFile; fileRef = A76CCF4713A7F93A00951A82 /* README */; };
+		A76CCF4F13A7F9C900951A82 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A76CCF4E13A7F9C900951A82 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +52,7 @@
 		A76CCF2213A7F93900951A82 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A76CCF2613A7F93A00951A82 /* litrosdealitro_phonegap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "litrosdealitro_phonegap-Info.plist"; sourceTree = "<group>"; };
 		A76CCF2913A7F93A00951A82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A76CCF2B13A7F93A00951A82 /* litrosdealitro_phonegap-Prefix.pch */ = {isa = PBXFileReference; path = "litrosdealitro_phonegap-Prefix.pch"; sourceTree = "<group>"; };
+		A76CCF2B13A7F93A00951A82 /* litrosdealitro_phonegap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litrosdealitro_phonegap-Prefix.pch"; sourceTree = "<group>"; };
 		A76CCF2C13A7F93A00951A82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76CCF2E13A7F93A00951A82 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		A76CCF3213A7F93A00951A82 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		A76CCF4213A7F93A00951A82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		A76CCF4413A7F93A00951A82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		A76CCF4713A7F93A00951A82 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		A76CCF4E13A7F9C900951A82 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		A76CCEFA13A7F93900951A82 = {
 			isa = PBXGroup;
 			children = (
+				A76CCF4E13A7F9C900951A82 /* www */,
 				A76CCF2413A7F93900951A82 /* litrosdealitro_phonegap */,
 				A76CCF0B13A7F93900951A82 /* Frameworks */,
 				A76CCF0913A7F93900951A82 /* Products */,
@@ -264,6 +267,7 @@
 				A76CCF4013A7F93A00951A82 /* PhoneGap.plist in Resources */,
 				A76CCF4313A7F93A00951A82 /* AppDelegate.h in Resources */,
 				A76CCF4813A7F93A00951A82 /* README in Resources */,
+				A76CCF4F13A7F9C900951A82 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Erick Camacho (V2NZW66M9L)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -329,6 +333,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62A98C3F-3B32-40D0-A14F-53571C9C0214";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -337,12 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Erick Camacho (V2NZW66M9L)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62A98C3F-3B32-40D0-A14F-53571C9C0214";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

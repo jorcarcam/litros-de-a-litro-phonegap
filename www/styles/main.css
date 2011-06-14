@@ -1,0 +1,19 @@
+.mainMenu {
+	height:350px;
+}
+
+#buscarButton{
+	margin-top:50px;
+}
+
+#cercaButton{
+	margin-top:50px;
+}
+
+#footerToolbar{
+	text-align: center; 
+}
+
+#footerMenu{
+	margin-top:2px;
+}
