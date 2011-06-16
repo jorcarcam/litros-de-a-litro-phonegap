@@ -56,20 +56,29 @@
     </script>
   </head>
   <body>
-  	  <div data-role="page">
+  	  <div data-role="page" id="gasolineras">
 
 	  <div data-role="header" data-theme="b">
 	    <h1>Litros de a litro</h1>
 	  </div>
-
 	  <div data-role="content" class="mainMenu"> 
-
-	    <a href="search.html" data-role="button" id="buscarButton" data-theme="c">Buscar</a>
-
-		<a href="search_results.html" data-role="button" id="cercaButton" data-theme="c" >Cerca de mi</a>
-
+	
+		<ul data-role="listview" data-inset="true" data-filter="true">
+		      <li>
+		        <a href="#">Insurgentes Sur 160 <span class="ui-li-count">0.2 km</span></a>
+		        <a href="#"></a>
+		      </li>
+		      <li>
+		        <a href="#">Florencia 16 <span class="ui-li-count">0.5 km</span></a>
+		        <a href="#"></a>
+		      </li>
+		      <li>
+		        <a href="#">R&iacute;o Volga 16 <span class="ui-li-count">1.0 km</span></a>
+		        <a href="#"></a>
+		      </li>
+		    </ul>
+		
 	  </div>
-
 	  <div data-role="footer" data-theme="b" id="footerToolbar">
 		<div data-role="controlgroup" data-type="horizontal" id="footerMenu">
 	    <a href="index.html" data-role="button" data-icon="home">Buscar</a>
@@ -77,6 +86,7 @@
 		<a href="index.html" data-role="button" data-icon="info">About</a>
 		</div>
 	  </div>
+	  
 	</div>
   </body>
 </html>
