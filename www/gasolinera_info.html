@@ -1,0 +1,54 @@
+<div data-role="page" id="gas_info_page">
+	<script id="gas_info_template" type="x-tmpl-mustache">
+	
+		<div class="gas_photo">
+			<img src="{{urlImg}}" width='270' height='200'/>
+		</div>
+		<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider" class="gas_title">Direcci&oacute;n</li>
+				<li>
+					{{direccion}}
+				</li>
+				<li data-role="list-divider" class="gas_title">Resultado Verificaci&oacute;n</li>				
+				<li class="station_list" >
+		            <a href=''>
+						{{#green}}
+						<img src="images/green_light.png" class="thumb_light" width="44" height="44" alt="Green Light">
+						<p style='{font-size:6px;}'>Sin inconsistencias</p>
+						{{/green}}
+						{{#orange}}
+						<img src="images/orange_light.png" class="thumb_light" width="44" height="44" alt="Orange Light">
+						<p style='{font-size:6px;}'>Algunas inconsistencias</p>
+						{{/orange}}
+						{{#red}}
+						<img src="images/red_light.png" class="thumb_light" width="44" height="44" alt="Red Light">
+						<p style='{font-size:6px;}'>Verificaci&oacute;n Negativa</p>
+						{{/red}}
+						{{#noLight}}
+						<img src="images/no_light.png" class="thumb_light" width="44" height="44" alt="No Light">
+						<p style='{font-size:6px;}'>No Verificada</p>
+						{{/noLight}}						
+					</a>
+		            <a href=''></a>
+				</li>
+				<li data-role="list-divider" class="gas_title">Tel&eacute;fono</li>
+				<li>{{telefono}}</li>
+				<li data-role="list-divider" class="gas_title">Denuncias en Profeco</li>
+				<li>{{denuncias}}</li>
+		</ul>
+	</script>
+	<div data-role="header">
+		<a href='' data-rel="back" data-icon='arrow-l'>Gasolineras</a>
+		<h1>Gasolinera</h1>
+	</div>
+	<div data-role="content">
+		<div id="gas_info_div">
+	</div>
+	<script type="text/javascript" charset="utf-8">
+
+		$('#gas_info_page').live('pageshow',function(event, ui) {
+
+			loadGasolineraInfo();
+		});
+	</script>	
+</div>

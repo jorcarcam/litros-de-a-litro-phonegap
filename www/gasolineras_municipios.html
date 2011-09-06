@@ -1,0 +1,41 @@
+<div data-role="page" id="gas_municipios_page">
+	<script id="gas_municipios_template" type="x-tmpl-mustache">
+		<ul data-role="listview" data-inset="true">
+			{{#gasolineras}}
+				<li class="stations_list" >
+		            <a href=''>
+						{{#green}}
+						<img src="images/green_light.png" class="thumb_light" width="44" height="44" alt="Green Light">
+						{{/green}}
+						{{#orange}}
+						<img src="images/orange_light.png" class="thumb_light" width="44" height="44" alt="Orange Light">
+						{{/orange}}
+						{{#red}}
+						<img src="images/red_light.png" class="thumb_light" width="44" height="44" alt="Red Light">
+						{{/red}}
+						{{#noLight}}
+						<img src="images/no_light.png" class="thumb_light" width="44" height="44" alt="No Light">
+						{{/noLight}}
+		                <h2>{{id}}</h2>
+						<p style='{font-size:6px;}'>{{direccion}}</p>
+					</a>
+		            <a href='' ontouchend='viewGasolineraInfo("{{id}}")'></a>
+				</li>
+			{{/gasolineras}}
+		</ul>
+	</script>
+	<div data-role="header">
+		<a href='' data-rel="back" data-icon='arrow-l'>Municipios</a>
+		<h1>Gasolineras</h1>
+	</div>
+	<div data-role="content">
+		<div id="gas_municipios_div">
+	</div>
+	<script type="text/javascript" charset="utf-8">
+
+		$('#gas_municipios_page').live('pageshow',function(event, ui) {
+
+			loadGasolinerasMunicipios();
+		});
+	</script>	
+</div>

@@ -1,0 +1,33 @@
+.station_list {
+	height:44px;
+
+}
+
+.station_list a {
+	/*height:44px;*/
+
+}
+
+.station_list  h2 {
+	position: absolute;
+	left:15px;
+	float:left;
+}
+
+.station_list  h3 {
+	position: absolute;
+	left:45px;
+	
+}
+
+
+.stations_list img {
+	border: 1px solid #fff;
+	
+	position: absolute;
+	left:3px;
+	top:20px;
+	height:44px;
+	width:44px;
+	float:left;
+}

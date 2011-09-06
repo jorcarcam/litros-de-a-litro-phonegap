@@ -1,0 +1,27 @@
+<div data-role="page" id="municipios_page">
+	<script id="municipios_template" type="x-tmpl-mustache">
+		<ul data-role="listview" data-inset="true">
+			{{#municipios}}
+				<li >
+		            <a href="" ontouchend='searchGasolinerasPorMunicipio("{{id}}");'>
+		                {{desc}}
+		            </a>
+				</li>
+			{{/municipios}}
+		</ul>
+	</script>
+	<div data-role="header">
+		<a href='' data-rel="back" data-icon='arrow-l'>Estados</a>
+		<h1>Municipios</h1>
+	</div>
+	<div data-role="content">
+		<div id="municipios_div">
+	</div>
+	<script type="text/javascript" charset="utf-8">
+
+		$('#municipios_page').live('pageshow',function(event, ui) {
+
+			loadMunicipios();
+		});
+	</script>	
+</div>

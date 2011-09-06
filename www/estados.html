@@ -1,0 +1,27 @@
+<div data-role="page" id="estados_page">
+	<script id="estados_template" type="x-tmpl-mustache">
+		<ul data-role="listview" data-inset="true">
+			{{#estados}}
+				<li >
+		            <a href="" ontouchend="searchMunicipios('{{id}}');">
+		                {{desc}}
+		            </a>
+				</li>
+			{{/estados}}
+		</ul>
+	</script>
+	<div data-role="header">
+		<a href='' data-rel="back" data-icon='arrow-l'>Men&uacute;</a>
+		<h1>Estados</h1>
+	</div>
+	<div data-role="content">
+		<div id="estados_div">
+	</div>
+	<script type="text/javascript" charset="utf-8">
+
+		$('#estados_page').live('pageshow',function(event, ui) {
+
+			loadEstados();
+		});
+	</script>	
+</div>	

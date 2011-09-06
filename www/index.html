@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<link rel="stylesheet" href="styles/jquery.mobile-1.0b2.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="styles/main.css" type="text/css" charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="js/phonegap-1.0.0.js"></script>
+	<script src="js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.mobile-1.0b2.min.js" type="text/javascript" charset="utf-8"></script>		
+	<script src="js/mustache.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery_mustache.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{		
+		console.log('is working');
+	}
+    $(document).ready(function(){
+		
+		document.addEventListener("deviceready",onDeviceReady,false);
+		
+	});
+    </script>
+  </head>
+  <body >
+  	  <div data-role="page" id="main_page">
+		<div data-role="header">
+			
+			<h1>Litros de a Litro</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true">
+	        
+	        <li >
+	            <a href="estados.html" >
+	                
+	                B&uacute;squeda
+	            </a>
+			</li>
+			<li>	
+				<a href="" >
+	                
+	                Cercanas
+	            </a>
+	        </li>
+	        </ul>
+	    </div>
+  	  </div>
+  </body>
+</html>
