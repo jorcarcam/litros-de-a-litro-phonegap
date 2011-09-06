@@ -124,12 +124,13 @@ function loadGasolineraInfo( ) {
 		url:url,
 		success: function(data) {
 			console.log('4 ' + data);
-			data = '{"id":"E00013","profecoId":478,"semaforo":2,"latitude":19.389182,"longitude":-99.190014,'+
+			localStorage['currenGasStation'] = data;
+			/*data = '{"id":"E00013","profecoId":478,"semaforo":2,"latitude":19.389182,"longitude":-99.190014,'+
 			'"distancia":0.3,"urlImg":"http://farm3.static.flickr.com/2739/5797266876_fc443c12b9.jpg",'+
 			'"urlHistoria":"http://webapps.profeco.gob.mx/verificacion/gasolina/gasolinera01.asp?IdEs=468",'+
 			'"razonSocial":"SERVICIO SAN PEDRO, S.A. DE C.V.","direccion":"BLVD ADOLFO LOPEZ MATEOS NO 282_ESQ: CALLE 10",'+
 			'"colonia":"SAN PEDRO DE LOS PINOS","cp":"01180","telefono":"55153860","cuall":"S","magma":"S","premium":"N",'+
-			'"diesel":"S","dme":"N", "denuncias":4}';
+			'"diesel":"S","dme":"N", "denuncias":4}';*/
 			var gasolinera = JSON.parse(data);
 			console.log('5 ' + gasolinera.semaforo);
 			gasolinera = addLightToGasStation(gasolinera);			
@@ -138,6 +139,7 @@ function loadGasolineraInfo( ) {
 			console.log('7');
 			reapplyStyles( $('#gas_info_page') );
 			console.log('8');
+			
 			$.mobile.pageLoading(true); 
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
@@ -146,4 +148,12 @@ function loadGasolineraInfo( ) {
 			$.mobile.pageLoading(true); 
 		}
 	});
+}
+
+function displayGasMap( ) {
+	var station = JSON.parse( localStorage['currenGasStation'] );
+	var marker = { latitude:station.latitude, longitude:station.longitude, html:station.direccion };
+	var markers = new Array();
+	markers.push( marker );
+	$('#gas_mapa_div').gMap( {markers:markers, zoom:15});
 }

@@ -1,0 +1,17 @@
+<div data-role="page" id="gas_mapa_page">
+	<div data-role="header">
+		<h1>Mapa</h1>
+		<a href="gasolinera_info.html" data-transition="flip" data-role="button" data-icon="info" class="ui-btn-right">Info</a>		
+	</div>
+	<div data-role="content">
+		<div id="gas_mapa_div">
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+
+		$('#gas_mapa_page').live('pageshow',function(event, ui) {
+
+			displayGasMap();
+		});
+	</script>
+</div>
